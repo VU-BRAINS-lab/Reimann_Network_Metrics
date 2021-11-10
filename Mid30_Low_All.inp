@@ -1,0 +1,698 @@
+
+TITLE: Mid30_Low_All;
+
+DATA:  FILE is dat_no_exclusions.dat;
+  
+VARIABLE: NAMES ARE  
+subnum_char age FEMALE gender
+PSWEIGHT FAMID rel_relationship demo_prim
+siten white NHWHITE AFRICAN
+HISPANIC OTHER cbcl01 cbcl03
+cbcl04 cbcl05 cbcl07 cbcl09
+cbcl10 cbcl13 cbcl15 cbcl16
+cbcl17 cbcl19 cbcl22 cbcl23
+cbcl25 cbcl26 cbcl27 cbcl28
+cbcl30 cbcl31 cbcl32 cbcl33
+cbcl34 cbcl35 cbcl36 cbcl37
+cbcl39 cbcl41 cbcl42 cbcl43
+cbcl46 cbcl50 cbcl51 cbcl52
+cbcl56a cbcl56b cbcl56c cbcl56f
+cbcl56g cbcl56h cbcl57 cbcl61
+cbcl62 cbcl65 cbcl66 cbcl68
+cbcl69 cbcl71 cbcl72 cbcl74
+cbcl75 cbcl80 cbcl81 cbcl82
+cbcl84 cbcl85 cbcl86 cbcl87
+cbcl88 cbcl89 cbcl90 cbcl93
+cbcl94 cbcl95 cbcl97 cbcl102
+cbcl103 cbcl106 cbcl109 cbcl111
+cbcl112 ATTEND DESTROY UPPSLPRE
+UPPSLPER UPPSNEG UPPSPOS UPPSSS
+prosocp prosocy CASHCHOICE RAVLT
+SUSPEND MHSERVICE SPEDE SPEDL
+cardsort flanker list pattern
+picture PPVT reading wiscv
+lmt OFFY SINJY HAVETWIN
+MATAGE PREMATURE WEEKSPRE GESTAGE
+GOTCBCL TICV MRIGE MRIP
+MRIS COIL2 COIL4 COIL5
+income income_log parent_education mom_education
+dad_education medication mrif_score fsqc_qc
+fsqc_qu_motion fsqc_qu_pialover fsqc_qu_wmunder 
+fsqc_qu_inhomogeneity
+iqc_dmri_ok_ser iqc_t1_ok_ser ksads_ptsd_raw_754_p 
+ksads_ptsd_raw_755_p
+ksads_ptsd_raw_756_p ksads_ptsd_raw_757_p 
+ksads_ptsd_raw_758_p ksads_ptsd_raw_759_p
+ksads_ptsd_raw_760_p ksads_ptsd_raw_761_p 
+ksads_ptsd_raw_762_p ksads_ptsd_raw_763_p
+ksads_ptsd_raw_764_p ksads_ptsd_raw_765_p 
+ksads_ptsd_raw_766_p ksads_ptsd_raw_767_p
+ksads_ptsd_raw_768_p ksads_ptsd_raw_769_p 
+ksads_ptsd_raw_770_p fes_youth_q1
+fes_youth_q2 fes_youth_q3 fes_youth_q4 fes_youth_q5
+fes_youth_q6 fes_youth_q7 fes_youth_q8 fes_youth_q9
+fam_enviro1_p fam_enviro2r_p fam_enviro3_p fam_enviro4r_p
+fam_enviro5_p fam_enviro6_p fam_enviro7r_p fam_enviro8_p
+fam_enviro9r_p macv_p_ss_fs macv_p_ss_fo macv_p_ss_isr
+macv_p_ss_r famhx_4_p famhx_4d_p___0 famhx_4d_p___1
+famhx_4d_p___2 famhx_4d_p___3 famhx_4d_p___7 famhx_4d_p___4
+famhx_4d_p___5 famhx_4d_p___6 famhx_4d_p___999 famhx4a_p___0
+famhx4a_p___1 famhx4a_p___2 famhx4a_p___3 famhx4a_p___7
+famhx4a_p___4 famhx4a_p___5 famhx4a_p___6 famhx4a_p___999
+fam_history_5_yes_no fam_history_q5a_drugs___0 
+fam_history_q5a_drugs___1 fam_history_q5a_drugs___2
+fam_history_q5a_drugs___3 fam_history_q5a_drugs___7 
+fam_history_q5a_drugs___4 fam_history_q5a_drugs___5
+fam_history_q5a_drugs___6 fam_history_q5a_drugs___999 
+fam_history_q5d_drugs___0 fam_history_q5d_drugs___1
+fam_history_q5d_drugs___2 fam_history_q5d_drugs___3 
+fam_history_q5d_drugs___7 fam_history_q5d_drugs___4
+fam_history_q5d_drugs___5 fam_history_q5d_drugs___6 
+fam_history_q5d_drugs___999 fam_history_6_yes_no
+fam_history_q6a_depression fam_history_q6d_depression 
+fam_history_7_yes_no fam_history_q7a_mania
+fam_history_q7d_mania fam_history_8_yes_no 
+fam_history_q8a_visions fam_history_q8d_visions
+fam_history_9_yes_no fam_history_q9a_trouble 
+fam_history_q9d_trouble fam_history_10_yes_no
+fam_history_q10a_nerves fam_history_q10d_nerves 
+fam_history_11_yes_no fam_history_q11a_professional
+fam_history_q11d_professional fam_history_12_yes_no 
+fam_history_q12a_hospitalized fam_history_q12d_hospitalized
+fam_history_13_yes_no fam_history_q13a_suicide fam_history_q13d_suicide crpbi_parent1_y
+crpbi_parent2_y crpbi_parent3_y crpbi_parent4_y crpbi_parent5_y
+crpbi_caregiver1_y crpbi_caregiver2_y crpbi_caregiver12_y crpbi_caregiver13_y
+crpbi_caregiver14_y crpbi_caregiver15_y 
+crpbi_caregiver16_y kbi_p_c_live_full_time
+kbi_p_c_guard___1 kbi_p_c_guard___2 
+kbi_p_c_guard___3 kbi_p_c_guard___4
+kbi_p_c_guard___5 kbi_p_c_guard___6 
+kbi_p_c_guard___7 kbi_p_c_guard___8
+kbi_p_c_guard___9 kbi_p_c_guard___10 
+kbi_p_c_guard___11 kbi_p_c_guard___12
+kbi_p_c_guard___13 kbi_p_conflict 
+kbi_p_conflict_causes___1 kbi_p_conflict_causes___2
+kbi_p_conflict_causes___3 kbi_p_conflict_causes___4 
+kbi_p_conflict_causes___5 kbi_p_conflict_causes___6
+kbi_p_conflict_causes___7 kbi_p_conflict_causes___8 
+kbi_p_conflict_causes___9 kbi_p_c_school_setting
+kbi_p_how_well_c_school kbi_p_grades_in_school 
+kbi_p_c_drop_in_grades kbi_p_c_spec_serv___1
+kbi_p_c_spec_serv___2 kbi_p_c_spec_serv___3 
+kbi_p_c_spec_serv___4 kbi_p_c_spec_serv___5
+kbi_p_c_spec_serv___6 kbi_p_c_spec_serv___7 
+kbi_p_c_spec_serv___8 kbi_p_c_spec_serv___9
+kbi_p_c_spec_serv___10 kbi_p_c_det_susp 
+kbi_p_c_det_reason___1 kbi_p_c_det_reason___2
+kbi_p_c_det_reason___3 kbi_p_c_det_reason___4 
+kbi_p_c_det_reason___5 kbi_p_c_det_reason___6
+kbi_p_c_det_reason___7 kbi_p_c_det_reason__999 
+kbi_p_c_det_reason__888 kbi_p_c_det_reason__8
+kbi_p_c_best_friend kbi_p_c_best_friend_len 
+kbi_p_c_reg_friend_group kbi_p_c_reg_friend_group_len
+kbi_p_c_reg_friend_group_opin kbi_p_c_bully 
+kbi_p_c_gay kbi_p_c_gay_problems
+kbi_p_c_trans kbi_p_c_trans_problems 
+kbi_p_c_mh_sa kbi_p_c_age_services
+kbi_p_c_age_services_bl_dk kbi_p_c_scheck1 
+kbi_p_c_scheck2 kbi_p_c_scheck3
+kbi_p_c_scheck4 kbi_p_c_scheck5 kbi_p_c_scheck6 
+kbi_p_c_scheck7
+kbi_p_c_scheck8 kbi_p_c_scheck9 
+kbi_p_c_scheck10 MDD
+MDD_Re MDD_P Dysthyma Dys_Re
+Dys_P Dep_O MDD_O_P GAD
+GAD_P Spe_AnxO GAD_OP OCD
+OCD_P OCD_O AN_BP AN_BP_Re
+AN_BP_P AN_R AN_R_Re AN_RP
+Bulim Bulim_pa Bulim_Re BED
+BED_Re BED_P F_E_AN_O F_E_Bul_O
+Bulim_P F_E_Bin_O ADHD ADHD_P
+ADHD_Re ADHD_O ODD ODD_P
+CD_Child CD_Ado CD_CP ASD
+BPI_ManC BPII_DpE BPI_HmC BPI_ManP
+BPI_DepP BPII_HmC BPII_Dp BPII_HmP
+BP_O BP_O_P PTSD PTSD_P
+PTSD_O PTSD_OP Sleep Sleep_P
+DMDD Hall HALL_P Del
+Del_P APS APS_P Schiz_O
+Schiz_OP Panic Panic_P Anx_O_Pa
+Anx_O_P Agor Agor_P Anx_O_A
+Sep_Anx Sep_P Anx_O_S Anx_OSP
+Soc_Anx Soc_AnxP Anx_O_So Anx_SoP
+Spe_Pho Spe_PhoP meim_p_ss_exp meim_p_ss_com
+meim_p_ss_total via_p_ss_hc via_p_ss_amer nsc_p_ss_mean_3_items
+fes_p_ss_fc fes_p_ss_fc_pr school_2_y school_3_y
+school_4_y school_5_y school_6_y school_7_y
+school_8_y school_9_y school_10_y school_12_y
+school_15_y school_17_y resiliency5a_y resiliency6a_y
+resiliency5b_y resiliency6b_y neighborhood_crime_y neighborhood1r_p
+neighborhood2r_p neighborhood3r_p su_risk_p_1 su_risk_p_2
+su_risk_p_3 su_risk_p_4 su_risk_p_5 su_risk_p_6
+su_risk_p_7 su_risk_p_8 su_risk_p_9 reshist_addr1_valid
+reshist_addr1_years reshist_addr1_elevation reshist_addr1_d1a reshist_addr1_walkindex
+reshist_addr1_grndtot reshist_addr1_p1tot 
+reshist_addr1_p1vlnt reshist_addr1_drugtot
+reshist_addr1_drgsale reshist_addr1_mjsale 
+reshist_addr1_drgposs reshist_addr1_dui
+reshist_addr1_adi_edu_l reshist_addr1_adi_edu_h 
+reshist_addr1_adi_work_c reshist_addr1_adi_income
+reshist_addr1_adi_in_dis reshist_addr1_adi_home_v 
+reshist_addr1_adi_rent reshist_addr1_adi_mortg
+reshist_addr1_adi_home_o reshist_addr1_adi_crowd 
+reshist_addr1_adi_unemp reshist_addr1_adi_pov
+reshist_addr1_adi_b138 reshist_addr1_adi_sp 
+reshist_addr1_adi_ncar reshist_addr1_adi_ntel
+reshist_addr1_adi_nplumb reshist_addr1_adi_wsum 
+reshist_addr1_adi_perc reshist_addr1_popdensity
+reshist_addr1_no2 reshist_addr1_pm25 
+reshist_addr1_proxrd reshist_addr2_valid
+reshist_addr2_years reshist_addr2_elevation 
+reshist_addr2_d1a reshist_addr2_walkindex
+reshist_addr2_grndtot reshist_addr2_p1tot 
+reshist_addr2_p1vlnt reshist_addr2_drugtot
+reshist_addr2_drgsale reshist_addr2_mjsale 
+reshist_addr2_drgposs reshist_addr2_dui
+reshist_addr2_adi_edu_l reshist_addr2_adi_edu_h 
+reshist_addr2_adi_work_c reshist_addr2_adi_income
+reshist_addr2_adi_in_dis reshist_addr2_adi_home_v 
+reshist_addr2_adi_rent reshist_addr2_adi_mortg
+reshist_addr2_adi_home_o reshist_addr2_adi_crowd 
+reshist_addr2_adi_unemp reshist_addr2_adi_pov
+reshist_addr2_adi_b138 reshist_addr2_adi_sp 
+reshist_addr2_adi_ncar reshist_addr2_adi_ntel
+reshist_addr2_adi_nplumb reshist_addr2_adi_wsum 
+reshist_addr2_adi_perc reshist_addr2_popdensity
+reshist_addr2_no2 reshist_addr2_pm25 
+reshist_addr2_proxrd reshist_addr3_valid
+reshist_addr3_years reshist_addr3_elevation 
+reshist_addr3_d1a reshist_addr3_walkindex
+reshist_addr3_grndtot reshist_addr3_p1tot 
+reshist_addr3_p1vlnt reshist_addr3_drugtot
+reshist_addr3_drgsale reshist_addr3_mjsale 
+reshist_addr3_drgposs reshist_addr3_dui
+reshist_addr3_adi_edu_l reshist_addr3_adi_edu_h 
+reshist_addr3_adi_work_c reshist_addr3_adi_income
+reshist_addr3_adi_in_dis reshist_addr3_adi_home_v
+reshist_addr3_adi_rent reshist_addr3_adi_mortg
+reshist_addr3_adi_home_o reshist_addr3_adi_crowd 
+reshist_addr3_adi_unemp reshist_addr3_adi_pov
+reshist_addr3_adi_b138 reshist_addr3_adi_sp 
+reshist_addr3_adi_ncar reshist_addr3_adi_ntel
+reshist_addr3_adi_nplumb reshist_addr3_adi_wsum 
+reshist_addr3_adi_perc reshist_addr3_popdensity
+reshist_addr3_no2 reshist_addr3_pm25 
+reshist_addr3_proxrd reshist_addr1_pm252016aa
+reshist_addr2_pm252016aa reshist_addr3_pm252016aa 
+reshist_addr1_leadrisk_poverty reshist_addr2_leadrisk_poverty
+reshist_addr3_leadrisk_poverty reshist_addr1_leadrisk_housing 
+reshist_addr2_leadrisk_housing reshist_addr3_leadrisk_housing
+reshist_addr1_leadrisk reshist_addr2_leadrisk 
+reshist_addr3_leadrisk tfmri_mid_beh_switchflag
+tfmri_mid_beh_performflag tfmri_mid_beh_nruns 
+tfmri_mid_all_beh_t_earnings tfmri_sst_beh_performflag
+tfmri_sst_nbeh_nruns tfmri_sst_all_beh_go_nt 
+tfmri_sst_all_beh_s_nt tfmri_sst_all_beh_total_nt
+tfmri_sst_all_beh_crgo_nt tfmri_sst_all_beh_crgo_rt 
+tfmri_sst_all_beh_crgo_mrt tfmri_sst_all_beh_crgo_stdrt
+tfmri_sst_all_beh_crlg_nt tfmri_sst_all_beh_crlg_rt 
+tfmri_sst_all_beh_crlg_mrt tfmri_sst_all_beh_crlg_stdrt
+tfmri_sst_all_beh_incrgo_nt tfmri_sst_all_beh_incrgo_rt 
+tfmri_sst_all_beh_incrgo_mrt tfmri_sst_all_beh_incrgo_stdrt
+tfmri_sst_all_beh_crs_nt tfmri_sst_all_beh_crs_rt 
+tfmri_sst_all_beh_incrs_nt tfmri_sst_all_beh_incrs_rt
+tfmri_sst_all_beh_incrs_mrt tfmri_sst_all_beh_incrs_stdrt 
+tfmri_sst_all_beh_tot_mssd tfmri_sst_all_beh_total_meanrt
+tfmri_sst_all_beh_total_mssrt tfmri_sst_all_beh_total_issrt 
+tfmri_nback_beh_performflag tfmri_nback_beh_nruns
+tfmri_nb_all_beh_ctotal_nt tfmri_nb_all_beh_ctotal_rate 
+tfmri_nb_all_beh_ctotal_mrt tfmri_nb_all_beh_ctotal_stdrt
+tfmri_nb_all_beh_c2b_nt tfmri_nb_all_beh_c2b_rate 
+tfmri_nb_all_beh_c2b_mrt tfmri_nb_all_beh_c2b_stdrt
+tfmri_nb_all_beh_c0b_nt tfmri_nb_all_beh_c0b_rate 
+tfmri_nb_all_beh_c0b_mrt tfmri_nb_all_beh_c0b_stdrt
+tfmri_nb_all_beh_total_nt parent_monitor_q1_y 
+parent_monitor_q2_y parent_monitor_q3_y
+parent_monitor_q4_y parent_monitor_q5_y meim_ethnic_id_p mex_american1_p
+mex_american2_p mex_american3_p mex_american4_p mex_american5_p
+mex_american6_p mex_american7_p mex_american8_p mex_american9_p
+mex_american10_p mex_american11_p mex_american12_p mex_american13_p
+mex_american14_p mex_american15_p mex_american16_p mex_american17_p
+mex_american18_p mex_american19_p mex_american20_p mex_american21_p
+mex_american22_p mex_american23_p mex_american24_p mex_american25_p
+mex_american26_p mex_american27_p mex_american28_p prosocial_q1_p
+prosocial_q2_p prosocial_q3_p vancouver_q2_p vancouver_q3_p
+vancouver_q4_p vancouver_q5_p vancouver_q6_p vancouver_q7_p
+vancouver_q8_p vancouver_q9_p vancouver_q10_p vancouver_q11_p
+vancouver_q12_p vancouver_q13_p vancouver_q14_p vancouver_q15_p
+vancouver_q16_p vancouver_q17_p vancouver_q1_ddn_p demo_fam_exp1_v2
+demo_fam_exp2_v2 demo_fam_exp3_v2 demo_fam_exp4_v2 demo_fam_exp5_v2
+demo_fam_exp6_v2 demo_fam_exp7_v2 demo_roster_v2 demo_roster_v2_refuse
+race_ethnicity demo_comb_income_v2 demo_prnt_ed_v2 demo_prtnr_ed_v2
+acs_raked_propensity_score interview_age sleepdisturb1_p sleepdisturb2_p
+sleepdisturb3_p sleepdisturb4_p sleepdisturb5_p sleepdisturb6_p
+sleepdisturb7_p sleepdisturb8_p sleepdisturb9_p sleepdisturb10_p
+sleepdisturb11_p sleepdisturb12_p sleepdisturb13_p sleepdisturb14_p
+sleepdisturb15_p sleepdisturb16_p sleepdisturb17_p sleepdisturb18_p
+sleepdisturb19_p sleepdisturb20_p sleepdisturb21_p sleepdisturb22_p
+sleepdisturb23_p sleepdisturb24_p sleepdisturb25_p sleepdisturb26_p
+bisbas1_y bisbas2_y bisbas3_y bisbas4_y
+bisbas6_y bisbas7_y bisbas8_y bisbas10_y
+bisbas9_y bisbas11_y bisbas12_y bisbas13_y
+bisbas14_y bisbas15_y bisbas16_y bisbas17_y
+bisbas18_y bisbas19_y bisbas20_y bisbas5r_y
+pmq_y_ss_mean_nm srpf_y_ss_iiss_nm srpf_y_ss_dfs_nm crpbi_y_ss_parent_nm
+pmq_y_ss_mean srpf_y_ss_ses srpf_y_ss_iiss srpf_y_ss_dfs
+crpbi_y_ss_parent matched_group excluded_missing m10mean_fd
+m10max_fd m10runs m10ov_dia m10ov_le
+m10low_asp m10low_sws m10low_swo m10low_dia
+m10low_le m10low_mod m10med_asp m10med_sws
+m10med_swo m10med_dia m10med_le m10med_mod
+m10high_asp m10high_sws m10high_swo m10high_dia
+m10high_le m10high_mod m10sc_asp m10sc_sws
+m10sc_swo m10sc_dia m10sc_le m10mot_asp
+m10mot_sws m10mot_swo m10mot_dia m10mot_le
+m10mf_asp m10mf_sws m10mf_swo m10mf_dia
+m10mf_le m10fp_asp m10fp_sws m10fp_swo
+m10fp_dia m10fp_le m10dm_asp m10dm_sws
+m10dm_swo m10dm_dia m10dm_le m10v2_asp
+m10v2_sws m10v2_swo m10v2_dia m10v2_le
+m10v1_asp m10v1_sws m10v1_swo m10v1_dia
+m10v1_le m10va_asp m10va_sws m10va_swo
+m10va_dia m10va_le m10shen_mod m10exlude
+wtnNRm10mw wtNRm10mwacs wtnNRm10cmw wtNRm10cmwacs
+m17mean_fd m17max_fd m17runs m17ov_dia
+m17ov_le m17low_asp m17low_sws m17low_swo
+m17low_dia m17low_le m17low_mod m17med_asp
+m17med_sws m17med_swo m17med_dia m17med_le
+m17med_mod m17high_asp m17high_sws m17high_swo
+m17high_dia m17high_le m17high_mod m17sc_asp
+m17sc_sws m17sc_swo m17sc_dia m17sc_le
+m17mot_asp m17mot_sws m17mot_swo m17mot_dia
+m17mot_le m17mf_asp m17mf_sws m17mf_swo
+m17mf_dia m17mf_le m17fp_asp m17fp_sws
+m17fp_swo m17fp_dia m17fp_le m17dm_asp
+m17dm_sws m17dm_swo m17dm_dia m17dm_le
+m17v2_asp m17v2_sws m17v2_swo m17v2_dia
+m17v2_le m17v1_asp m17v1_sws m17v1_swo
+m17v1_dia m17v1_le m17va_asp m17va_sws
+m17va_swo m17va_dia m17va_le m17shen_mod
+m17exlude wtnNRm17mw wtNRm17mwacs wtnNRm17cmw
+wtNRm17cmwacs m23mean_fd m23max_fd m23runs
+m23ov_dia m23ov_le m23low_asp m23low_sws
+m23low_swo m23low_dia m23low_le m23low_mod
+m23med_asp m23med_sws m23med_swo m23med_dia
+m23med_le m23med_mod m23high_asp m23high_sws
+m23high_swo m23high_dia m23high_le m23high_mod
+m23sc_asp m23sc_sws m23sc_swo m23sc_dia
+m23sc_le m23mot_asp m23mot_sws m23mot_swo
+m23mot_dia m23mot_le m23mf_asp m23mf_sws
+m23mf_swo m23mf_dia m23mf_le m23fp_asp
+m23fp_sws m23fp_swo m23fp_dia m23fp_le
+m23dm_asp m23dm_sws m23dm_swo m23dm_dia
+m23dm_le m23v2_asp m23v2_sws m23v2_swo
+m23v2_dia m23v2_le m23v1_asp m23v1_sws
+m23v1_swo m23v1_dia m23v1_le m23va_asp
+m23va_sws m23va_swo m23va_dia m23va_le
+m23shen_mod m23exlude wtnNRm23mw wtNRm23mwacs
+wtnNRm23cmw wtNRm23cmwacs m30mean_fd m30max_fd
+m30runs m30ov_dia m30ov_le m30low_asp
+m30low_sws m30low_swo m30low_dia m30low_le
+m30low_mod m30med_asp m30med_sws m30med_swo
+m30med_dia m30med_le m30med_mod m30high_asp
+m30high_sws m30high_swo m30high_dia m30high_le
+m30high_mod m30sc_asp m30sc_sws m30sc_swo
+m30sc_dia m30sc_le m30mot_asp m30mot_sws
+m30mot_swo m30mot_dia m30mot_le m30mf_asp
+m30mf_sws m30mf_swo m30mf_dia m30mf_le
+m30fp_asp m30fp_sws m30fp_swo m30fp_dia
+m30fp_le m30dm_asp m30dm_sws m30dm_swo
+m30dm_dia m30dm_le m30v2_asp m30v2_sws
+m30v2_swo m30v2_dia m30v2_le m30v1_asp
+m30v1_sws m30v1_swo m30v1_dia m30v1_le
+m30va_asp m30va_sws m30va_swo m30va_dia
+m30va_le m30shen_mod m30exlude wtnNRm30mw
+wtNRm30mwacs wtnNRm30cmw wtNRm30cmwacs r10mean_fd
+r10max_fd r10runs r10ov_dia r10ov_le
+r10low_asp r10low_sws r10low_swo r10low_dia
+r10low_le r10low_mod r10med_asp r10med_sws
+r10med_swo r10med_dia r10med_le r10med_mod
+r10high_asp r10high_sws r10high_swo r10high_dia
+r10high_le r10high_mod r10sc_asp r10sc_sws
+r10sc_swo r10sc_dia r10sc_le r10mot_asp
+r10mot_sws r10mot_swo r10mot_dia r10mot_le
+r10mf_asp r10mf_sws r10mf_swo r10mf_dia
+r10mf_le r10fp_asp r10fp_sws r10fp_swo
+r10fp_dia r10fp_le r10dm_asp r10dm_sws
+r10dm_swo r10dm_dia r10dm_le r10v2_asp
+r10v2_sws r10v2_swo r10v2_dia r10v2_le
+r10v1_asp r10v1_sws r10v1_swo r10v1_dia
+r10v1_le r10va_asp r10va_sws r10va_swo
+r10va_dia r10va_le r10shen_mod r10exlude
+wtnNRr10mw wtNRr10mwacs wtnNRr10cmw wtNRr10cmwacs
+r17mean_fd r17max_fd r17runs r17ov_dia
+r17ov_le r17low_asp r17low_sws r17low_swo
+r17low_dia r17low_le r17low_mod r17med_asp
+r17med_sws r17med_swo r17med_dia r17med_le
+r17med_mod r17high_asp r17high_sws r17high_swo
+r17high_dia r17high_le r17high_mod r17sc_asp
+r17sc_sws r17sc_swo r17sc_dia r17sc_le
+r17mot_asp r17mot_sws r17mot_swo r17mot_dia
+r17mot_le r17mf_asp r17mf_sws r17mf_swo
+r17mf_dia r17mf_le r17fp_asp r17fp_sws
+r17fp_swo r17fp_dia r17fp_le r17dm_asp
+r17dm_sws r17dm_swo r17dm_dia r17dm_le
+r17v2_asp r17v2_sws r17v2_swo r17v2_dia
+r17v2_le r17v1_asp r17v1_sws r17v1_swo
+r17v1_dia r17v1_le r17va_asp r17va_sws
+r17va_swo r17va_dia r17va_le r17shen_mod
+r17exlude wtnNRr17mw wtNRr17cmwacs wtnNRr17cmw
+wtNRr17cmwacs_1 r23mean_fd r23max_fd r23runs
+r23ov_dia r23ov_le r23low_asp r23low_sws
+r23low_swo r23low_dia r23low_le r23low_mod
+r23med_asp r23med_sws r23med_swo r23med_dia
+r23med_le r23med_mod r23high_asp r23high_sws
+r23high_swo r23high_dia r23high_le r23high_mod
+r23sc_asp r23sc_sws r23sc_swo r23sc_dia
+r23sc_le r23mot_asp r23mot_sws r23mot_swo
+r23mot_dia r23mot_le r23mf_asp r23mf_sws
+r23mf_swo r23mf_dia r23mf_le r23fp_asp
+r23fp_sws r23fp_swo r23fp_dia r23fp_le
+r23dm_asp r23dm_sws r23dm_swo r23dm_dia
+r23dm_le r23v2_asp r23v2_sws r23v2_swo
+r23v2_dia r23v2_le r23v1_asp r23v1_sws
+r23v1_swo r23v1_dia r23v1_le r23va_asp
+r23va_sws r23va_swo r23va_dia r23va_le
+r23shen_mod r23exlude wtnNRr23mw wtNRr23mwacs
+wtnNRr23cmw wtNRr23cmwacs r30mean_fd r30max_fd
+r30runs r30ov_dia r30ov_le r30low_asp
+r30low_sws r30low_swo r30low_dia r30low_le
+r30low_mod r30med_asp r30med_sws r30med_swo
+r30med_dia r30med_le r30med_mod r30high_asp
+r30high_sws r30high_swo r30high_dia r30high_le
+r30high_mod r30sc_asp r30sc_sws r30sc_swo
+r30sc_dia r30sc_le r30mot_asp r30mot_sws
+r30mot_swo r30mot_dia r30mot_le r30mf_asp
+r30mf_sws r30mf_swo r30mf_dia r30mf_le
+r30fp_asp r30fp_sws r30fp_swo r30fp_dia
+r30fp_le r30dm_asp r30dm_sws r30dm_swo
+r30dm_dia r30dm_le r30v2_asp r30v2_sws
+r30v2_swo r30v2_dia r30v2_le r30v1_asp
+r30v1_sws r30v1_swo r30v1_dia r30v1_le
+r30va_asp r30va_sws r30va_swo r30va_dia
+r30va_le r30shen_mod r30exlude wtnNRr30mw
+wtNRr30mwacs wtnNRr30cmw wtNRr30cmwacs n10mean_fd
+n10max_fd n10runs n10ov_dia n10ov_le
+n10low_asp n10low_sws n10low_swo n10low_dia
+n10low_le n10low_mod n10med_asp n10med_sws
+n10med_swo n10med_dia n10med_le n10med_mod
+n10high_asp n10high_sws n10high_swo n10high_dia
+n10high_le n10high_mod n10sc_asp n10sc_sws
+n10sc_swo n10sc_dia n10sc_le n10mot_asp
+n10mot_sws n10mot_swo n10mot_dia n10mot_le
+n10mf_asp n10mf_sws n10mf_swo n10mf_dia
+n10mf_le n10fp_asp n10fp_sws n10fp_swo
+n10fp_dia n10fp_le n10dm_asp n10dm_sws
+n10dm_swo n10dm_dia n10dm_le n10v2_asp
+n10v2_sws n10v2_swo n10v2_dia n10v2_le
+n10v1_asp n10v1_sws n10v1_swo n10v1_dia
+n10v1_le n10va_asp n10va_sws n10va_swo
+n10va_dia n10va_le n10shen_mod n10exlude
+wtnNRn10mw wtNRn10mwacs wtnNRn10cmw wtNRn10cmwacs
+n17mean_fd n17max_fd n17runs n17ov_dia
+n17ov_le n17low_asp n17low_sws n17low_swo
+n17low_dia n17low_le n17low_mod n17med_asp
+n17med_sws n17med_swo n17med_dia n17med_le
+n17med_mod n17high_asp n17high_sws n17high_swo
+n17high_dia n17high_le n17high_mod n17sc_asp
+n17sc_sws n17sc_swo n17sc_dia n17sc_le
+n17mot_asp n17mot_sws n17mot_swo n17mot_dia
+n17mot_le n17mf_asp n17mf_sws n17mf_swo
+n17mf_dia n17mf_le n17fp_asp n17fp_sws
+n17fp_swo n17fp_dia n17fp_le n17dm_asp
+n17dm_sws n17dm_swo n17dm_dia n17dm_le
+n17v2_asp n17v2_sws n17v2_swo n17v2_dia
+n17v2_le n17v1_asp n17v1_sws n17v1_swo
+n17v1_dia n17v1_le n17va_asp n17va_sws
+n17va_swo n17va_dia n17va_le n17shen_mod
+n17exlude wtnNRn17mw wtNRn17mwacs wtnNRn17cmw
+wtNRn17cmwacs n23mean_fd n23max_fd n23runs
+n23ov_dia n23ov_le n23low_asp n23low_sws
+n23low_swo n23low_dia n23low_le n23low_mod
+n23med_asp n23med_sws n23med_swo n23med_dia
+n23med_le n23med_mod n23high_asp n23high_sws
+n23high_swo n23high_dia n23high_le n23high_mod
+n23sc_asp n23sc_sws n23sc_swo n23sc_dia
+n23sc_le n23mot_asp n23mot_sws n23mot_swo
+n23mot_dia n23mot_le n23mf_asp n23mf_sws
+n23mf_swo n23mf_dia n23mf_le n23fp_asp
+n23fp_sws n23fp_swo n23fp_dia n23fp_le
+n23dm_asp n23dm_sws n23dm_swo n23dm_dia
+n23dm_le n23v2_asp n23v2_sws n23v2_swo
+n23v2_dia n23v2_le n23v1_asp n23v1_sws
+n23v1_swo n23v1_dia n23v1_le n23va_asp
+n23va_sws n23va_swo n23va_dia n23va_le
+n23shen_mod n23exlude wtnNRn23mw wtNRn23mwacs
+wtnNRn23cmw wtNRn23cmwacs n30mean_fd n30max_fd
+n30runs n30ov_dia n30ov_le n30low_asp
+n30low_sws n30low_swo n30low_dia n30low_le
+n30low_mod n30med_asp n30med_sws n30med_swo
+n30med_dia n30med_le n30med_mod n30high_asp
+n30high_sws n30high_swo n30high_dia n30high_le
+n30high_mod n30sc_asp n30sc_sws n30sc_swo
+n30sc_dia n30sc_le n30mot_asp n30mot_sws
+n30mot_swo n30mot_dia n30mot_le n30mf_asp
+n30mf_sws n30mf_swo n30mf_dia n30mf_le
+n30fp_asp n30fp_sws n30fp_swo n30fp_dia
+n30fp_le n30dm_asp n30dm_sws n30dm_swo
+n30dm_dia n30dm_le n30v2_asp n30v2_sws
+n30v2_swo n30v2_dia n30v2_le n30v1_asp
+n30v1_sws n30v1_swo n30v1_dia n30v1_le
+n30va_asp n30va_sws n30va_swo n30va_dia
+n30va_le n30shen_mod n30exlude wtnNRn30mw
+wtNRn30mwacs wtnNRn30cmw wtNRn30cmwacs s10mean_fd
+s10max_fd s10runs s10ov_dia s10ov_le
+s10low_asp s10low_sws s10low_swo s10low_dia
+s10low_le s10low_mod s10med_asp s10med_sws
+s10med_swo s10med_dia s10med_le s10med_mod
+s10high_asp s10high_sws s10high_swo s10high_dia
+s10high_le s10high_mod s10sc_asp s10sc_sws
+s10sc_swo s10sc_dia s10sc_le s10mot_asp
+s10mot_sws s10mot_swo s10mot_dia s10mot_le
+s10mf_asp s10mf_sws s10mf_swo s10mf_dia
+s10mf_le s10fp_asp s10fp_sws s10fp_swo
+s10fp_dia s10fp_le s10dm_asp s10dm_sws
+s10dm_swo s10dm_dia s10dm_le s10v2_asp
+s10v2_sws s10v2_swo s10v2_dia s10v2_le
+s10v1_asp s10v1_sws s10v1_swo s10v1_dia
+s10v1_le s10va_asp s10va_sws s10va_swo
+s10va_dia s10va_le s10shen_mod s10exlude
+wtnNRs10mw wtNRs10mwacs wtnNRs10cmw wtNRs10cmwacs
+s17mean_fd s17max_fd s17runs s17ov_dia
+s17ov_le s17low_asp s17low_sws s17low_swo
+s17low_dia s17low_le s17low_mod s17med_asp
+s17med_sws s17med_swo s17med_dia s17med_le
+s17med_mod s17high_asp s17high_sws s17high_swo
+s17high_dia s17high_le s17high_mod s17sc_asp
+s17sc_sws s17sc_swo s17sc_dia s17sc_le
+s17mot_asp s17mot_sws s17mot_swo s17mot_dia
+s17mot_le s17mf_asp s17mf_sws s17mf_swo
+s17mf_dia s17mf_le s17fp_asp s17fp_sws
+s17fp_swo s17fp_dia s17fp_le s17dm_asp
+s17dm_sws s17dm_swo s17dm_dia s17dm_le
+s17v2_asp s17v2_sws s17v2_swo s17v2_dia
+s17v2_le s17v1_asp s17v1_sws s17v1_swo
+s17v1_dia s17v1_le s17va_asp s17va_sws
+s17va_swo s17va_dia s17va_le s17shen_mod
+s17exlude wtnNRs17mw wtNRs17mwacs wtnNRs17cmw
+wtNRs17cmwacs s23mean_fd s23max_fd s23runs
+s23ov_dia s23ov_le s23low_asp s23low_sws
+s23low_swo s23low_dia s23low_le s23low_mod
+s23med_asp s23med_sws s23med_swo s23med_dia
+s23med_le s23med_mod s23high_asp s23high_sws
+s23high_swo s23high_dia s23high_le s23high_mod
+s23sc_asp s23sc_sws s23sc_swo s23sc_dia
+s23sc_le s23mot_asp s23mot_sws s23mot_swo
+s23mot_dia s23mot_le s23mf_asp s23mf_sws
+s23mf_swo s23mf_dia s23mf_le s23fp_asp
+s23fp_sws s23fp_swo s23fp_dia s23fp_le
+s23dm_asp s23dm_sws s23dm_swo s23dm_dia
+s23dm_le s23v2_asp s23v2_sws s23v2_swo
+s23v2_dia s23v2_le s23v1_asp s23v1_sws
+s23v1_swo s23v1_dia s23v1_le s23va_asp
+s23va_sws s23va_swo s23va_dia s23va_le
+s23shen_mod s23exlude wtnNRs23mw wtNRs23mwacs
+wtnNRs23cmw wtNRs23cmwacs s30mean_fd s30max_fd
+s30runs s30ov_dia s30ov_le s30low_asp
+s30low_sws s30low_swo s30low_dia s30low_le
+s30low_mod s30med_asp s30med_sws s30med_swo
+s30med_dia s30med_le s30med_mod s30high_asp
+s30high_sws s30high_swo s30high_dia s30high_le
+s30high_mod s30sc_asp s30sc_sws s30sc_swo
+s30sc_dia s30sc_le s30mot_asp s30mot_sws
+s30mot_swo s30mot_dia s30mot_le s30mf_asp
+s30mf_sws s30mf_swo s30mf_dia s30mf_le
+s30fp_asp s30fp_sws s30fp_swo s30fp_dia
+s30fp_le s30dm_asp s30dm_sws s30dm_swo
+s30dm_dia s30dm_le s30v2_asp s30v2_sws
+s30v2_swo s30v2_dia s30v2_le s30v1_asp
+s30v1_sws s30v1_swo s30v1_dia s30v1_le
+s30va_asp s30va_sws s30va_swo s30va_dia
+s30va_le s30shen_mod s30exlude wtnNRs30mw
+wtNRs30mwacs wtnNRs30cmw wtNRs30cmwacs wt_n_NR_m10mw2
+wt_NR_m10mw2acs wt_n_NR_m17mw2 wt_NR_m17mw2acs wt_n_NR_m23mw2
+wt_NR_m23mw2acs wt_n_NR_m30mw2 wt_NR_m30mw2acs wt_n_NR_r10mw2
+wt_NR_r10mw2acs wt_n_NR_r17mw2 wt_NR_r17mw2acs wt_n_NR_r23mw2
+wt_NR_r23mw2acs wt_n_NR_r30mw2 wt_NR_r30mw2acs wt_n_NR_n10mw2
+wt_NR_n10mw2acs wt_n_NR_n17mw2 wt_NR_n17mw2acs wt_n_NR_n23mw2
+wt_NR_n23mw2acs wt_n_NR_n30mw2 wt_NR_n30mw2acs wt_n_NR_s10mw2
+wt_NR_s10mw2acs wt_n_NR_s17mw2 wt_NR_s17mw2acs wt_n_NR_s23mw2
+wt_NR_s30mw2acs
+    ;
+
+  USEVARIABLES ARE cbcl01 cbcl03 cbcl04 
+  cbcl07 cbcl09 cbcl10
+  cbcl13 cbcl15 cbcl16
+  cbcl17 cbcl19 cbcl22 cbcl23
+  cbcl25 cbcl26 cbcl27 cbcl28
+  cbcl30 cbcl31 cbcl32 cbcl33 cbcl34
+  cbcl35 cbcl37 cbcl39 cbcl41
+  cbcl43 cbcl46
+  cbcl50 cbcl51 cbcl52 cbcl56a
+  cbcl56b cbcl56c cbcl56f cbcl56g
+  cbcl57 cbcl61 cbcl62 cbcl66  cbcl68 
+  cbcl71 cbcl72 cbcl74 cbcl75
+  cbcl80 cbcl81 cbcl82 cbcl84
+  cbcl85 cbcl86 cbcl87 cbcl88 cbcl89
+  cbcl90 cbcl94
+  cbcl95 cbcl97 cbcl102 cbcl103
+  cbcl106 cbcl109 cbcl111 cbcl112
+  ATTEND DESTROY FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL2 COIL4 COIL5
+	m30low_asp m30low_sws   
+ 	m30low_dia m30low_le 
+  	m30low_mod m30low_swo
+  ;
+
+  CATEGORICAL=cbcl01 cbcl03 cbcl04 
+  cbcl07 cbcl09 cbcl10
+  cbcl13 cbcl15 cbcl16
+  cbcl17 cbcl19 cbcl22 cbcl23
+  cbcl25 cbcl26 cbcl27 cbcl28
+  cbcl30 cbcl31 cbcl32 cbcl33 cbcl34
+  cbcl35 cbcl37 cbcl39 cbcl41
+  cbcl43 cbcl46
+  cbcl50 cbcl51 cbcl52 cbcl56a
+  cbcl56b cbcl56c cbcl56f cbcl56g
+  cbcl57 cbcl61 cbcl62 cbcl66  cbcl68 
+  cbcl71 cbcl72 cbcl74 cbcl75
+  cbcl80 cbcl81 cbcl82 cbcl84
+  cbcl85 cbcl86 cbcl87 cbcl88 cbcl89
+  cbcl90 cbcl94
+  cbcl95 cbcl97 cbcl102 cbcl103
+  cbcl106 cbcl109 cbcl111 cbcl112
+  ATTEND DESTROY;
+
+  MISSING ARE .;
+  WEIGHT = PSWEIGHT;
+    STRATIFICATION=SITEN;
+    IDVARIABLE = subnum_char;
+    CLUSTER=FAMID;
+    
+    DEFINE: STANDARDIZE 
+	m30low_asp m30low_sws   
+ 	m30low_dia m30low_le 
+  	m30low_mod m30low_swo
+    ;
+
+
+    ANALYSIS:
+    ESTIMATOR=WLSMV;
+    ITERATIONS=500000;
+    TYPE = COMPLEX;
+    COVERAGE = 0.01;
+
+  MODEL:
+
+  [GENERAL@0]; [INT@0]; [EXT@0]; [ADHD@0];
+  GENERAL@1; INT@1; EXT@1; ADHD@1; 
+
+  GENERAL BY CBCL01*.9 cbcl03 cbcl04 
+  cbcl07 cbcl09 cbcl10
+  cbcl13 cbcl15 cbcl16
+  cbcl17 cbcl19 cbcl22 cbcl23
+  cbcl25 cbcl26 cbcl27 cbcl28
+  cbcl30 cbcl31 cbcl32 cbcl33 cbcl34
+  cbcl35 cbcl37 cbcl39 cbcl41
+  cbcl43 cbcl46
+  cbcl50 cbcl51 cbcl52 cbcl56a
+  cbcl56b cbcl56c cbcl56f cbcl56g
+  cbcl57 cbcl61 cbcl62 cbcl66 cbcl68 
+  cbcl71 cbcl72 cbcl74 cbcl75
+  cbcl80 cbcl81 cbcl82 cbcl84
+  cbcl85 cbcl86 cbcl87 cbcl88 cbcl89
+  cbcl90 cbcl94
+  cbcl95 cbcl97 cbcl102 cbcl103
+  cbcl106 cbcl109 cbcl111 cbcl112
+  ATTEND DESTROY;
+
+  EXT BY CBCL03*.8 CBCL07 CBCL15 CBCL16
+  cbcl19 cbcl22 cbcl23
+  cbcl25 cbcl26 cbcl27 cbcl28 cbcl34
+  cbcl37 cbcl39 
+  cbcl43 cbcl57 cbcl68 cbcl72 cbcl74     
+  cbcl81 cbcl82 cbcl86 cbcl87 cbcl88 
+  cbcl89 cbcl90 cbcl94 cbcl95 cbcl97
+  cbcl106 cbcl109 DESTROY;
+
+  ADHD BY CBCL01*.8 cbcl04 cbcl09 cbcl10
+  cbcl13 cbcl17 cbcl41 cbcl46 cbcl61 
+  cbcl62 cbcl66 cbcl80 cbcl84 cbcl85
+  ATTEND;
+
+  INT BY CBCL30*.8 CBCL31 CBCL32 cbcl33 
+  CBCL35 CBCL50 cbcl51 CBCL52 
+  cbcl56a CBCL56B CBCL56C CBCL56F
+  CBCL56G CBCL71 CBCL75 
+  CBCL102 CBCL103 CBCL111 CBCL112;
+ 
+  GENERAL WITH INT @0;
+  GENERAL WITH EXT @0;
+  GENERAL WITH ADHD @0;
+  INT WITH EXT @0;
+  ADHD WITH EXT @0; ADHD WITH INT @0;
+
+  m30low_asp ON EXT 
+  GENERAL INT ADHD FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL4 COIL5 ; 
+
+  m30low_sws ON EXT 
+  GENERAL INT ADHD FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL4 COIL5 ;
+  
+  m30low_dia ON EXT 
+  GENERAL INT ADHD FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL4 COIL5 ;
+  
+  m30low_le ON EXT 
+  GENERAL INT ADHD FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL4 COIL5 ;
+  
+  m30low_mod ON EXT 
+  GENERAL INT ADHD FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL4 COIL5 ;
+
+
+  m30low_swo ON EXT 
+  GENERAL INT ADHD FEMALE AGE
+  NHWHITE AFRICAN HISPANIC
+  COIL4 COIL5 ;
+
+  
+    OUTPUT: SAMPSTAT STDYX;
