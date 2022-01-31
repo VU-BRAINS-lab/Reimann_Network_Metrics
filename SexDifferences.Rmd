@@ -1,0 +1,92 @@
+---
+title: "Behavioral Correlations and Sex Differences"
+output: html_notebook
+---
+
+Load Task datasets with bifactor scores
+```{r}
+load("~/Desktop/Aim6/Code/MergingBifactorScores/BifactorScores_Fam.RData")
+
+```
+
+
+              SEX DIFF ANALYSES - ADHD*Sex 
+
+
+```{r}
+
+female <- subset(abcd_merged_fam, FEMALE == 1)
+male <- subset(abcd_merged_fam, FEMALE != 1)
+
+t.test(female$ADHD,male$ADHD) 
+```
+
+
+Mid Shen
+ - No significant interaction between ADHD * Sex p = 0.229727 
+```{r}
+
+
+
+mid_30_shen_fit <-lm(mid_30_merged_fam$m30shen_mod ~ mid_30_merged_fam$age + mid_30_merged_fam$FEMALE + mid_30_merged_fam$race_ethnicity + mid_30_merged_fam$mri_info_deviceserialnumber + mid_30_merged_fam$GENERAL+ mid_30_merged_fam$INT+ mid_30_merged_fam$EXT + mid_30_merged_fam$ADHD +  (mid_30_merged_fam$ADHD * mid_30_merged_fam$FEMALE))
+summary(mid_30_shen_fit)
+
+
+
+```
+
+
+Nback Shen 
+ - No significant interaction between ADHD * Sex p = 0.129846
+```{r}
+
+nback_30_shen_fit <-lm(nback_30_merged_fam$n30shen_mod ~ nback_30_merged_fam$age + nback_30_merged_fam$FEMALE + nback_30_merged_fam$race_ethnicity + nback_30_merged_fam$mri_info_deviceserialnumber +  nback_30_merged_fam$GENERAL+ nback_30_merged_fam$INT+ nback_30_merged_fam$EXT + nback_30_merged_fam$ADHD +  (nback_30_merged_fam$ADHD * nback_30_merged_fam$FEMALE))
+summary(nback_30_shen_fit)    
+
+```
+
+
+
+Rest  Shen
+ - No significant interaction between ADHD * Sex p = 0.09917
+```{r}
+
+rest_30_shen_fit <-lm(rest_30_merged$r30shen_mod ~ rest_30_merged$age + rest_30_merged$FEMALE + rest_30_merged$race_ethnicity + rest_30_merged$mri_info_deviceserialnumber +  rest_30_merged$GENERAL+ rest_30_merged$INT+ rest_30_merged$EXT + rest_30_merged$ADHD +  (rest_30_merged$ADHD * rest_30_merged$FEMALE))
+summary(rest_30_shen_fit)  
+
+```
+
+SST Shen
+- Significant ADHD* sex interaction across all four thresholds p = 0.116175
+```{r}
+
+
+
+sst_30_shen_fit <-lm(sst_30_merged_fam$s30shen_mod ~ sst_30_merged_fam$age + sst_30_merged_fam$FEMALE + sst_30_merged_fam$race_ethnicity + sst_30_merged_fam$mri_info_deviceserialnumber +  sst_30_merged_fam$GENERAL+ sst_30_merged_fam$INT+ sst_30_merged_fam$EXT + sst_30_merged_fam$ADHD +  (sst_30_merged_fam$ADHD * sst_30_merged_fam$FEMALE))
+summary(sst_30_shen_fit)  
+
+```
+
+Rest Motor Local Efficiency
+ - No significant interaction between ADHD * Sex p = 0.708649
+```{r}
+
+rest_30_mot_le_fit <-lm(rest_30_merged$r30mot_le ~ rest_30_merged$age + rest_30_merged$FEMALE + rest_30_merged$race_ethnicity + rest_30_merged$mri_info_deviceserialnumber +  rest_30_merged$GENERAL+ rest_30_merged$INT+ rest_30_merged$EXT + rest_30_merged$ADHD +  (rest_30_merged$ADHD * rest_30_merged$FEMALE))
+summary(rest_30_mot_le_fit)  
+
+```
+
+
+
+Sex Diff FDR Correction
+```{r}
+
+
+sd_shen_p = c(0.229727, 0.129846, 0.09917,0.116175,0.708649)
+         
+fdr_sd_shen <- p.adjust(sd_shen_p, method="fdr")
+fdr_sd_shen <- as.data.frame(fdr_sd_shen)
+
+fdr_sd_shen
+```
+
